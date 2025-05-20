@@ -7,8 +7,10 @@ public class OrdemDeServicoRepositoy : IOrdemDeServicoRepositoy
 {
     private static readonly List<OrdemDeServico> _ordens = new();
 
-    public void AdicionarOrdermDeServico(OrdemDeServico ordemDeServico)
+    public void AdicionarOrdemDeServico(OrdemDeServico ordemDeServico)
     {
+        if (ordemDeServico == null)
+            throw new ArgumentNullException(nameof(ordemDeServico));
         _ordens.Add(ordemDeServico);
     }
 

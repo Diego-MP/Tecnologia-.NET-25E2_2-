@@ -8,10 +8,17 @@ public class Equipamento
     public string Serial { get; set; }
     public double Valor { get; set; }
     
-    public void AdicionarEquipamento(string nome, string modelo, string serial)
+    public void AdicionarEquipamento(string nome, string modelo, string serial, double valor)
     {
+        if (serial == null)
+            throw new ArgumentNullException(nameof(serial));
+        
+        if ( valor < 0) 
+            throw new ArgumentNullException(nameof(valor));
+        
         Nome = nome;
         Modelo = modelo;
         Serial = serial;
+        Valor = valor;
     }
 }

@@ -27,7 +27,7 @@ public class OrdemDeServico
     
     public virtual void EnviarOrdemDeServico(OrdemDeServico ordem, string email)
     {
-        Console.WriteLine($"[EMAIL FAKE] Enviando ordem Nº {ordem.NumeroOS} para {email}...");
+        Console.WriteLine($"[EMAIL] Enviando ordem Nº {ordem.NumeroOS} para {email}...");
     }
 
     public List<OrdemDeServico> ListarOrdensDeServicoes(DateTime dataInicio)

@@ -47,7 +47,7 @@ class Program
             Serial = "LG4567F34567",
             Valor = 890.00
         });
-        ordemDeServicoRepositoy.AdicionarOrdermDeServico(ordem_EzComp);
+        ordemDeServicoRepositoy.AdicionarOrdemDeServico(ordem_EzComp);
 
         // CLIENTE 2 - XyPrints
         var client_XyPrints = new Cliente
@@ -78,7 +78,7 @@ class Program
             Serial = "PTT7890044",
             Valor = 3200.00
         });
-        ordemDeServicoRepositoy.AdicionarOrdermDeServico(ordem_XyPrints);
+        ordemDeServicoRepositoy.AdicionarOrdemDeServico(ordem_XyPrints);
 
         // CLIENTE 3 - FastFix
         var client_FastFix = new Cliente
@@ -102,7 +102,7 @@ class Program
             Serial = "NBK987656789",
             Valor = 2300.00
         });
-        ordemDeServicoRepositoy.AdicionarOrdermDeServico(ordem_FastFix);
+        ordemDeServicoRepositoy.AdicionarOrdemDeServico(ordem_FastFix);
 
         var todasOrdens = ordemDeServicoRepositoy.ListarTodas();
 
@@ -144,7 +144,7 @@ class Program
             Serial = "ABC123456",
             Valor = 2200.00
         });
-        ordemDeServicoRepositoy.AdicionarOrdermDeServico(ordem_Orcamento);
+        ordemDeServicoRepositoy.AdicionarOrdemDeServico(ordem_Orcamento);
 
         var ordem_Faturada = OrdemDeServicoFactory.OrdemDeServico(client_EzComp, DateTime.Today.AddDays(30), "Boleto");
         ordem_Faturada.NumeroOS = 3;
@@ -155,7 +155,7 @@ class Program
             Serial = "XYZ987654",
             Valor = 4800.00
         });
-        ordemDeServicoRepositoy.AdicionarOrdermDeServico(ordem_Faturada);
+        ordemDeServicoRepositoy.AdicionarOrdemDeServico(ordem_Faturada);
         
         var ordem_outra = ordemDeServicoRepositoy.BuscarOrdemDeServico(2);
 

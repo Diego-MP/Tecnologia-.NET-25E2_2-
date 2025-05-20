@@ -4,7 +4,7 @@ namespace Clipper.OS._3.DomainLayer.Repositorie;
 
 public interface IOrdemDeServicoRepositoy
 {
-    public void AdicionarOrdermDeServico(OrdemDeServico ordemDeServico);
+    public void AdicionarOrdemDeServico(OrdemDeServico ordemDeServico);
     
     public OrdemDeServico  BuscarOrdemDeServico(int numeoDaOrdemDeServico);
     

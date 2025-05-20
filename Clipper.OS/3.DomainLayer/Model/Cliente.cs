@@ -9,6 +9,9 @@ public class Cliente
     
     public void AdicionarDocumento(string tipo, string numero)
     {
+        if (tipo == null)
+            throw new ArgumentNullException(nameof(tipo));
+        
         Documento.Add(new Documento { Tipo = tipo, Numero = numero });
     }
 }

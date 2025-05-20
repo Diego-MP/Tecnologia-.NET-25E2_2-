@@ -7,6 +7,9 @@ public class OrdemDeServicoFactory
 {
     public static OrdemDeServico OrdemDeServico(Cliente cliente)
     {
+        if (cliente == null)
+            throw new ArgumentNullException(nameof(cliente));
+        
         return new OrdemDeServico
         {
             Cliente = cliente
@@ -24,6 +27,8 @@ public class OrdemDeServicoFactory
 
     public static OrdemDeServico OrdemDeServico(Cliente cliente, DateTime prazoDePagamento, string metodoDePagamento)
     {
+        if (metodoDePagamento == null)
+            throw new ArgumentNullException(nameof(metodoDePagamento));
         return new Faturada
         {
             Cliente = cliente,
