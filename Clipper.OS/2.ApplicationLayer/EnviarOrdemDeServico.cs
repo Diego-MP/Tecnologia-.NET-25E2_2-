@@ -6,6 +6,10 @@ using Clipper.OS._4.InfrastructureLayer;
 
 namespace Clipper.OS._2.ApplicationLayer;
 
+/*Princípio SOLID: Single Responsibility Principle (SRP) — Princípio da Responsabilidade Única
+A classe EnviarOrdemDeServico tem uma única responsabilidade: orquestrar o envio de uma ordem 
+de serviço por e-mail, delegando persistência e envio para outras classes.
+*/
 public class EnviarOrdemDeServico
 {
     private IOrdemDeServicoRepositoy _ordemDeServicoRepositoy;
@@ -14,6 +18,11 @@ public class EnviarOrdemDeServico
     public EnviarOrdemDeServico(IOrdemDeServicoRepositoy ordemDeServicoRepositoy,
         EnviarOrdemDeServicoService enviarOrdemDeServicoService)
     {
+        /* Baixo Acoplamento
+         * As dependências são injetadas, não criadas internamente.
+         * A utilização de interfaces e injeção de dependência reduz o acoplamento entre as classes,
+         * permitindo trocar implementações facilmente.
+         */
         _ordemDeServicoRepositoy = ordemDeServicoRepositoy;
         _enviarOrdemDeServicoService = enviarOrdemDeServicoService;
     }

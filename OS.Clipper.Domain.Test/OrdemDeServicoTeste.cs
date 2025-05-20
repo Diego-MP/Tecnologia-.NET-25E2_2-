@@ -45,7 +45,7 @@ namespace OS.Clipper.Domain.Test
         }
         
         [Fact]
-        public void NaoDeve_Criar_OrdemDeServico_SemCliente()
+        public void Nao_Deve_Criar_OrdemDeServico_SemCliente()
         {
             var equipamento_test = new Equipamento
             {
